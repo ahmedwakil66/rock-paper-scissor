@@ -46,7 +46,7 @@ class GameTable {
         } else {
           row.push("Draw");
         }
-        this.game.softReset();
+        this.game.resetSoft();
       }
       table.push(row);
     }

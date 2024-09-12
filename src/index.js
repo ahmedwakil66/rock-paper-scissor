@@ -2,7 +2,7 @@ import Launcher from "./launcher.js";
 
 try {
   const launcher = new Launcher(...process.argv.slice(2));
-  launcher.play();
+  launcher.start();
 } catch (error) {
   console.log(error.message);
   console.log("Example: Rock, Paper, Scissor");

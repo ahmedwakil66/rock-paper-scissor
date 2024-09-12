@@ -36,7 +36,7 @@ class Launcher {
 
   play() {
     const game = this.game;
-    game.softReset();
+    game.resetSoft();
     const playable = game.playable;
 
     // Record computer move
@@ -85,11 +85,11 @@ class Launcher {
       }
     };
 
-    this.terminal.question("Enter your move: ", handleInput);
+    this.terminal.askQuestion("Enter your move: ", handleInput);
   }
 
   whatNext() {
-    this.terminal.question("Do you want to play again? [Y/N]", (input) => {
+    this.terminal.askQuestion("Do you want to play again? [Y/N]", (input) => {
       if (input.toLowerCase() === "y" || input.toLowerCase() === "yes") {
         this.play();
       } else {
@@ -102,7 +102,7 @@ class Launcher {
     console.log("The table shows who wins/looses against whom.");
     this.table.showGameHelp();
 
-    this.terminal.question(
+    this.terminal.askQuestion(
       "Do you understand the rules now? [Y/N]",
       (input) => {
         if (input.toLowerCase() === "y" || input.toLowerCase() === "yes") {

@@ -79,14 +79,14 @@ class Game {
     return this.#winnerMove;
   }
 
-  softReset() {
+  resetSoft() {
     this.#firstMove = null;
     this.#lastMove = null;
     this.#winnerMove = null;
   }
 
   reset() {
-    this.softReset();
+    this.resetSoft();
     this.#playable = [];
     this.#history = [];
   }

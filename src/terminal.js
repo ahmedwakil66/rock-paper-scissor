@@ -10,7 +10,7 @@ class Terminal {
     });
   }
 
-  question(question, callback) {
+  askQuestion(question, callback) {
     this.rl.question(question, (input) => {
       callback(input.trim(), this.rl);
     });

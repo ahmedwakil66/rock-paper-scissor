@@ -1,12 +1,12 @@
 import crypto from "node:crypto";
 
 class HMAC {
-  randomKey(size) {
+  getRandomKey(size) {
     return crypto.randomBytes(size || 32);
   }
 
   getStringKey(size) {
-    return this.randomKey(size || 32).toString("hex");
+    return this.getRandomKey(size || 32).toString("hex");
   }
 
   createHmac(message, key, alg) {
